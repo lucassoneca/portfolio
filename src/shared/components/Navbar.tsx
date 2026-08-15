@@ -144,17 +144,36 @@ export const Navbar: React.FC<NavbarProps> = ({ onToggleTerminal }) => {
             ))}
             <div className="mobile-controls-row">
               <button
-                className="btn-custom btn-secondary btn-sm"
+                className="control-btn"
                 onClick={() => {
                   onToggleTerminal();
                   setIsMobileMenuOpen(false);
                 }}
               >
-                <Terminal size={16} /> CLI Terminal
+                <Terminal size={16} />
+                <span>CLI Terminal</span>
               </button>
-              <button className="btn-custom btn-secondary btn-sm" onClick={toggleLanguage}>
-                <Globe size={16} /> {language === 'pt' ? 'English' : 'Português'}
+              <button className="control-btn" onClick={toggleLanguage}>
+                <Globe size={16} />
+                <span>{language === 'pt' ? 'English' : 'Português'}</span>
               </button>
+            </div>
+            {/* Theme switcher in mobile drawer */}
+            <div className="mobile-theme-row">
+              <span className="mobile-theme-title">Tema Visual:</span>
+              <div className="mobile-theme-dots">
+                {availableThemes.map((item) => (
+                  <button
+                    key={item.id}
+                    className={`mobile-theme-dot-btn ${theme === item.id ? 'active' : ''}`}
+                    onClick={() => setTheme(item.id)}
+                    title={item.name}
+                  >
+                    <span className="theme-dot" style={{ backgroundColor: item.accentColor }} />
+                    <span>{item.name.split(' ')[0]}</span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>

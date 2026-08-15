@@ -234,7 +234,7 @@ html[data-theme='cyber-matrix'] .ascii-logo {
 }
 
 .terminal-table td:first-child {
-  width: 220px;
+  width: 180px;
   color: var(--cyan-accent);
 }
 
@@ -357,4 +357,25 @@ html[data-theme='cyber-matrix'] .ascii-logo {
   color: var(--emerald-accent);
   font-weight: 700;
   font-size: var(--text-sm);
+}
+
+@media (max-width: 640px) {
+  .terminal-overlay {
+    padding: var(--space-2);
+    align-items: flex-end;
+  }
+  .terminal-window {
+    height: 80vh;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  .ascii-logo {
+    display: none;
+  }
+  .terminal-body {
+    padding: var(--space-3);
+    font-size: 0.78rem;
+  }
+  .terminal-table td:first-child {
+    width: 110px;
+  }
 }

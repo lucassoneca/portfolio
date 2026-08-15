@@ -25,6 +25,10 @@ export const ProjectsSection: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAutoPlayActive, setIsAutoPlayActive] = useState(true);
 
+  // Touch swipe handling for mobile devices
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+
   const categories: { id: ProjectCategory; label: string }[] = [
     { id: 'all', label: t.projects.categories.all },
     { id: 'backend', label: t.projects.categories.backend },
@@ -64,7 +68,7 @@ export const ProjectsSection: React.FC = () => {
     if (isAutoPlayActive && totalSlides > 1) {
       autoPlayRef.current = window.setInterval(() => {
         handleNext();
-      }, 5000);
+      }, 6000);
     }
     return () => {
       if (autoPlayRef.current !== null) {
@@ -79,8 +83,37 @@ export const ProjectsSection: React.FC = () => {
   };
 
   /**
+   * Mobile touch gestures (Swipe left / right)
+   */
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsAutoPlayActive(false);
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current !== null && touchEndX.current !== null) {
+      const distance = touchStartX.current - touchEndX.current;
+      const minSwipeDistance = 45;
+
+      if (distance > minSwipeDistance) {
+        // Swiped Left -> Next
+        handleNext();
+      } else if (distance < -minSwipeDistance) {
+        // Swiped Right -> Prev
+        handlePrev();
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+    setIsAutoPlayActive(true);
+  };
+
+  /**
    * Calculates the relative offset from the currentIndex
-   * Returns a normalized value like -1 (left), 0 (center), +1 (right), etc.
    */
   const getCardOffset = (index: number) => {
     if (totalSlides <= 1) return 0;
@@ -105,7 +138,7 @@ export const ProjectsSection: React.FC = () => {
 
         {/* Controls Bar: Category Filters & Nav Arrows */}
         <div className="projects-controls-wrapper">
-          <div className="category-filter-pills">
+          <div className="category-filter-pills-scrollable">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -138,11 +171,14 @@ export const ProjectsSection: React.FC = () => {
           </div>
         </div>
 
-        {/* 3D Focus Coverflow Carousel Stage */}
+        {/* 3D Focus Coverflow Carousel Stage with Mobile Touch Support */}
         <div
           className="carousel-stage-viewport"
           onMouseEnter={() => setIsAutoPlayActive(false)}
           onMouseLeave={() => setIsAutoPlayActive(true)}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <div className="carousel-track">
             {filteredProjects.map((project, idx) => {
@@ -219,14 +255,14 @@ export const ProjectsSection: React.FC = () => {
 
                       {/* Tech Stack Tags */}
                       <div className="card-tech-pills">
-                        {project.techStack.slice(0, 4).map((tech) => (
+                        {project.techStack.slice(0, 3).map((tech) => (
                           <span key={tech} className="compact-tech-tag">
                             {tech}
                           </span>
                         ))}
-                        {project.techStack.length > 4 && (
+                        {project.techStack.length > 3 && (
                           <span className="compact-tech-tag more-tag">
-                            +{project.techStack.length - 4}
+                            +{project.techStack.length - 3}
                           </span>
                         )}
                       </div>
@@ -279,14 +315,14 @@ export const ProjectsSection: React.FC = () => {
             onClick={handlePrev}
             aria-label="Anterior"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={22} />
           </button>
           <button
             className="stage-nav-arrow stage-arrow-right"
             onClick={handleNext}
             aria-label="Próximo"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={22} />
           </button>
         </div>
 
