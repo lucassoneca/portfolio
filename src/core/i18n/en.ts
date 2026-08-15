@@ -1,0 +1,131 @@
+import type { I18nDictionary } from '../types/i18n';
+
+export const en: I18nDictionary = {
+  nav: {
+    about: 'About Me',
+    projects: 'Projects',
+    skills: 'Skills',
+    experience: 'Education & Trajectory',
+    contact: 'Contact',
+    terminal: 'Terminal',
+    hireMe: 'Contact',
+  },
+  hero: {
+    statusAvailable: 'Backend & Modern Web Development',
+    statusBusy: 'Backend & Modern Web Development',
+    greeting: "Hi, I'm",
+    headline: 'Backend Developer & Modern Web Development',
+    subheadline:
+      'Graduated in Systems Analysis and Development (ADS). Focused on building clean RESTful APIs, solid business logic, databases, and creating modern, high-converting landing pages and websites.',
+    viewProjects: 'View Projects',
+    aboutMe: 'About Me',
+    openTerminal: 'CLI Terminal',
+    stats: {
+      experience: 'Age',
+      projects: 'Higher Degree',
+      uptime: 'Core Focus',
+      contributions: 'Web & UI',
+    },
+  },
+  about: {
+    badge: 'About Me & Skills',
+    title: 'Who I Am & Specialties',
+    subtitle:
+      'Learn a bit more about my journey, degree in ADS, backend development, and modern web creations.',
+    interests: 'Specialties & Core Focus',
+    lifestyle: 'Dev Environment & Work Style',
+  },
+  projects: {
+    badge: 'GitHub Projects',
+    title: 'Featured Projects Showcase',
+    subtitle:
+      'Browse through my top GitHub projects: RESTful APIs, microservices, chatbots, and modern landing pages with technical summaries and direct repository links.',
+    categories: {
+      all: 'All Projects',
+      fullstack: 'Full Stack',
+      backend: 'Backend & APIs',
+      frontend: 'Web & UI',
+      cloud: 'Cloud & Tools',
+      architecture: 'Architecture',
+    },
+    searchPlaceholder: 'Search project...',
+    viewCaseStudy: 'View Technical Summary',
+    viewCode: 'GitHub Repository',
+    viewLive: 'Live Production Demo',
+    metricsLabel: 'Highlight',
+    architecturePattern: 'Pattern / Architecture',
+    modal: {
+      caseStudyTitle: 'Project Technical Summary',
+      problem: 'Technical Challenge',
+      solution: 'Implemented Solution',
+      architectureDeepDive: 'Structure & Design Decisions',
+      tradeOffs: 'Design Trade-Offs',
+      challenges: 'Hard Challenges Solved',
+      metricsAchieved: 'Outcomes & Metrics',
+      keyLessons: 'Key Learnings',
+      codeHighlight: 'Core Code Implementation',
+      close: 'Close Summary',
+    },
+  },
+  skills: {
+    badge: 'Stack & Tooling',
+    title: 'Skills Matrix & Technologies',
+    subtitle:
+      'Hands-on foundations in backend development with Java and TypeScript, relational databases, and creating modern responsive websites.',
+    yearsOfExperience: 'proficiency level',
+    proficiency: 'Technical Proficiency',
+    domains: {
+      backend: 'Backend & RESTful APIs',
+      frontend: 'Frontend & Landing Pages',
+      cloud_devops: 'Containers & Tooling',
+      database_cache: 'Databases & Persistence',
+      architecture_testing: 'Clean Architecture & Testing',
+    },
+  },
+  experience: {
+    badge: 'Education & Trajectory',
+    title: 'Academic Education & Practical Development',
+    subtitle:
+      'Degree in Systems Analysis and Development (ADS) and continuous dedication to practical engineering excellence.',
+    achievements: 'Key Achievements & Learnings:',
+    technologies: 'Practiced Technologies:',
+    architectureDecisions: 'Applied Architectural Concepts:',
+  },
+  contact: {
+    badge: 'Contact',
+    title: 'Connect or Drop a Message',
+    subtitle:
+      'Feel free to connect on professional networks or reach out via the message form below.',
+    form: {
+      name: 'Your Name / Organization',
+      email: 'Your Email',
+      subject: 'Subject',
+      message: 'Message...',
+      send: 'Send Message',
+      sending: 'Transmitting payload...',
+      successTitle: 'Message dispatched successfully!',
+      successMessage: 'Thank you for reaching out. I will get back to you soon!',
+    },
+    directLinks: 'Networks & Direct Contact',
+    copyEmail: 'Copy Email',
+    emailCopied: 'Email copied to clipboard!',
+    availableBadge: 'Systems Analysis & Development (ADS)',
+  },
+  terminal: {
+    title: 'Lucas Developer CLI Terminal (v1.0.0)',
+    subtitle: 'Type "help" to see available commands',
+    welcomeMsg:
+      'Session initialized successfully. Type "help" or use Tab to explore Lucas Bezerra da Cruz portfolio via command line.',
+    typeHelp: 'Tip: Type "help" or press Tab to autocomplete.',
+    placeholder: 'type a command (e.g., about, skills, projects, contact)...',
+    minimize: 'Minimize',
+    maximize: 'Expand',
+    close: 'Close Terminal',
+  },
+  footer: {
+    tagline: 'Engineered with Clean Code, TypeScript, Design Tokens, and Modern Architecture.',
+    designedWith: 'Software Engineering Portfolio',
+    architectureNotes: 'Inspect Site Architecture',
+    rights: 'All rights reserved.',
+  },
+};

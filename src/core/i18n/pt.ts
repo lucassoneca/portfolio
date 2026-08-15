@@ -1,0 +1,131 @@
+import type { I18nDictionary } from '../types/i18n';
+
+export const pt: I18nDictionary = {
+  nav: {
+    about: 'Sobre Mim',
+    projects: 'Projetos',
+    skills: 'Competências',
+    experience: 'Formação & Trajetória',
+    contact: 'Contato',
+    terminal: 'Terminal',
+    hireMe: 'Contato',
+  },
+  hero: {
+    statusAvailable: 'Backend & Criação de Sites Modernos',
+    statusBusy: 'Backend & Criação de Sites Modernos',
+    greeting: 'Olá, me chamo',
+    headline: 'Desenvolvedor Backend & Criação de Sites Modernos',
+    subheadline:
+      'Formado em Análise e Desenvolvimento de Sistemas (ADS). Foco na construção de APIs RESTful estruturadas, regras de negócio consistentes, bancos de dados e desenvolvimento de landing pages e sites modernos de alta performance.',
+    viewProjects: 'Ver Projetos',
+    aboutMe: 'Sobre Mim',
+    openTerminal: 'Terminal CLI',
+    stats: {
+      experience: 'Idade',
+      projects: 'Graduação Concluída',
+      uptime: 'Foco Principal',
+      contributions: 'Criação Web',
+    },
+  },
+  about: {
+    badge: 'Sobre Mim & Habilidades',
+    title: 'Quem Sou Eu & Especialidades',
+    subtitle:
+      'Conheça um pouco mais sobre minha jornada, formação em ADS, atuação em backend e criação de sites modernos.',
+    interests: 'Especialidades & Foco de Atuação',
+    lifestyle: 'Ambiente & Estilo de Código',
+  },
+  projects: {
+    badge: 'Projetos no GitHub',
+    title: 'Showcase de Projetos em Destaque',
+    subtitle:
+      'Navegue pelos meus principais projetos no GitHub: APIs RESTful, microsserviços, chatbots e páginas web modernas com resumos técnicos e links para os repositórios.',
+    categories: {
+      all: 'Todos os Projetos',
+      fullstack: 'Full Stack',
+      backend: 'Backend & APIs',
+      frontend: 'Sites & UI',
+      cloud: 'Cloud & Ferramentas',
+      architecture: 'Arquitetura',
+    },
+    searchPlaceholder: 'Buscar projeto...',
+    viewCaseStudy: 'Ver Resumo Técnico',
+    viewCode: 'Repositório GitHub',
+    viewLive: 'Deploy / Live Demo',
+    metricsLabel: 'Destaque',
+    architecturePattern: 'Padrão / Arquitetura',
+    modal: {
+      caseStudyTitle: 'Resumo Completo do Projeto',
+      problem: 'O Desafio Técnico',
+      solution: 'A Solução Implementada',
+      architectureDeepDive: 'Estrutura & Padrões',
+      tradeOffs: 'Decisões de Design',
+      challenges: 'Desafios Superados',
+      metricsAchieved: 'Resultados & Métricas',
+      keyLessons: 'Principais Aprendizados',
+      codeHighlight: 'Exemplo de Código Chave',
+      close: 'Fechar Resumo',
+    },
+  },
+  skills: {
+    badge: 'Stack & Ferramental',
+    title: 'Matriz de Competências & Tecnologias',
+    subtitle:
+      'Domínio prático em desenvolvimento backend com Java e TypeScript, bancos de dados relacionais e criação de sites responsivos modernos.',
+    yearsOfExperience: 'nível de domínio',
+    proficiency: 'Proficiência Técnica',
+    domains: {
+      backend: 'Backend & APIs RESTful',
+      frontend: 'Frontend & Landing Pages',
+      cloud_devops: 'Containers & Ferramentas',
+      database_cache: 'Bancos de Dados & Persistência',
+      architecture_testing: 'Clean Architecture & Testes',
+    },
+  },
+  experience: {
+    badge: 'Formação & Trajetória',
+    title: 'Formação Acadêmica & Prática Técnica',
+    subtitle:
+      'Graduação em Análise e Desenvolvimento de Sistemas e dedicação contínua na evolução prática como desenvolvedor backend e web.',
+    achievements: 'Principais Conquistas & Aprendizados:',
+    technologies: 'Tecnologias Praticadas:',
+    architectureDecisions: 'Conceitos Arquiteturais Aplicados:',
+  },
+  contact: {
+    badge: 'Contato',
+    title: 'Conecte-se ou Envie uma Mensagem',
+    subtitle:
+      'Fique à vontade para entrar em contato através das redes profissionais ou enviando uma mensagem no formulário abaixo.',
+    form: {
+      name: 'Seu Nome / Organização',
+      email: 'Seu E-mail',
+      subject: 'Assunto',
+      message: 'Mensagem...',
+      send: 'Enviar Mensagem',
+      sending: 'Transmitindo dados...',
+      successTitle: 'Mensagem enviada com sucesso!',
+      successMessage: 'Obrigado pelo contato. Retornarei em breve!',
+    },
+    directLinks: 'Redes & Contato Direto',
+    copyEmail: 'Copiar E-mail',
+    emailCopied: 'E-mail copiado para a área de transferência!',
+    availableBadge: 'Análise e Desenvolvimento de Sistemas (ADS)',
+  },
+  terminal: {
+    title: 'Lucas Developer CLI Terminal (v1.0.0)',
+    subtitle: 'Digite "help" para ver os comandos disponíveis',
+    welcomeMsg:
+      'Sessão iniciada com sucesso. Digite "help" para navegar pelo portfólio de Lucas Bezerra da Cruz via linha de comando.',
+    typeHelp: 'Dica: Digite "help" ou pressione Tab para autocompletar.',
+    placeholder: 'digite um comando (ex: about, skills, projects, contact)...',
+    minimize: 'Minimizar',
+    maximize: 'Expandir',
+    close: 'Fechar Terminal',
+  },
+  footer: {
+    tagline: 'Construído com Clean Code, TypeScript, Design Tokens e Padrões de Arquitetura.',
+    designedWith: 'Portfólio de Engenharia de Software',
+    architectureNotes: 'Ver Arquitetura do Site',
+    rights: 'Todos os direitos reservados.',
+  },
+};

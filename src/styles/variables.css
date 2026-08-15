@@ -1,0 +1,210 @@
+:root {
+  /* Font Families */
+  --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Typography Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-max: 1240px;
+  --header-height: 76px;
+}
+
+/* Theme 1: Dark Obsidian (Default) */
+:root,
+html[data-theme='dark-obsidian'] {
+  --bg-primary: #080b11;
+  --bg-secondary: #0d121d;
+  --bg-tertiary: #131b2c;
+  --bg-surface: rgba(16, 23, 38, 0.75);
+  --bg-surface-elevated: rgba(22, 32, 53, 0.85);
+  --bg-glass: rgba(13, 18, 29, 0.65);
+  --bg-glass-strong: rgba(19, 27, 44, 0.88);
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-accent: #818cf8;
+
+  --accent-primary: #6366f1;
+  --accent-secondary: #8b5cf6;
+  --accent-glow: rgba(99, 102, 241, 0.35);
+  --accent-glow-subtle: rgba(99, 102, 241, 0.12);
+  --accent-border: rgba(99, 102, 241, 0.3);
+
+  --cyan-accent: #06b6d4;
+  --cyan-glow: rgba(6, 182, 212, 0.3);
+  --emerald-accent: #10b981;
+  --amber-accent: #f59e0b;
+  --rose-accent: #f43f5e;
+
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-base: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.2);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px -8px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.25);
+
+  --canvas-grid-color: rgba(99, 102, 241, 0.06);
+  --canvas-dot-color: rgba(99, 102, 241, 0.18);
+}
+
+/* Theme 2: Cyber Matrix */
+html[data-theme='cyber-matrix'] {
+  --bg-primary: #040d07;
+  --bg-secondary: #07170c;
+  --bg-tertiary: #0c2414;
+  --bg-surface: rgba(9, 28, 15, 0.75);
+  --bg-surface-elevated: rgba(14, 40, 22, 0.85);
+  --bg-glass: rgba(7, 23, 12, 0.65);
+  --bg-glass-strong: rgba(11, 33, 18, 0.88);
+
+  --text-primary: #ecfdf5;
+  --text-secondary: #a7f3d0;
+  --text-muted: #4ade80;
+  --text-accent: #34d399;
+
+  --accent-primary: #10b981;
+  --accent-secondary: #059669;
+  --accent-glow: rgba(16, 185, 129, 0.4);
+  --accent-glow-subtle: rgba(16, 185, 129, 0.15);
+  --accent-border: rgba(16, 185, 129, 0.35);
+
+  --cyan-accent: #2dd4bf;
+  --cyan-glow: rgba(45, 212, 191, 0.3);
+  --emerald-accent: #00ff88;
+  --amber-accent: #facc15;
+  --rose-accent: #fb7185;
+
+  --border-subtle: rgba(16, 185, 129, 0.12);
+  --border-base: rgba(16, 185, 129, 0.22);
+  --border-strong: rgba(16, 185, 129, 0.4);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px -8px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.3);
+
+  --canvas-grid-color: rgba(16, 185, 129, 0.08);
+  --canvas-dot-color: rgba(16, 185, 129, 0.25);
+}
+
+/* Theme 3: Midnight Neon */
+html[data-theme='midnight-neon'] {
+  --bg-primary: #050a17;
+  --bg-secondary: #0a1329;
+  --bg-tertiary: #101e3e;
+  --bg-surface: rgba(13, 25, 52, 0.75);
+  --bg-surface-elevated: rgba(18, 35, 71, 0.85);
+  --bg-glass: rgba(10, 19, 41, 0.65);
+  --bg-glass-strong: rgba(15, 29, 60, 0.88);
+
+  --text-primary: #f0f9ff;
+  --text-secondary: #bae6fd;
+  --text-muted: #7dd3fc;
+  --text-accent: #38bdf8;
+
+  --accent-primary: #06b6d4;
+  --accent-secondary: #3b82f6;
+  --accent-glow: rgba(6, 182, 212, 0.4);
+  --accent-glow-subtle: rgba(6, 182, 212, 0.14);
+  --accent-border: rgba(6, 182, 212, 0.35);
+
+  --cyan-accent: #00f0ff;
+  --cyan-glow: rgba(0, 240, 255, 0.35);
+  --emerald-accent: #34d399;
+  --amber-accent: #fbbf24;
+  --rose-accent: #f43f5e;
+
+  --border-subtle: rgba(6, 182, 212, 0.12);
+  --border-base: rgba(6, 182, 212, 0.22);
+  --border-strong: rgba(6, 182, 212, 0.4);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px -8px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 30px rgba(6, 182, 212, 0.35);
+
+  --canvas-grid-color: rgba(6, 182, 212, 0.07);
+  --canvas-dot-color: rgba(6, 182, 212, 0.22);
+}
+
+/* Theme 4: Clean Light */
+html[data-theme='clean-light'] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-surface: rgba(255, 255, 255, 0.88);
+  --bg-surface-elevated: rgba(255, 255, 255, 0.98);
+  --bg-glass: rgba(255, 255, 255, 0.75);
+  --bg-glass-strong: rgba(255, 255, 255, 0.92);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-accent: #4f46e5;
+
+  --accent-primary: #4f46e5;
+  --accent-secondary: #7c3aed;
+  --accent-glow: rgba(79, 70, 229, 0.25);
+  --accent-glow-subtle: rgba(79, 70, 229, 0.08);
+  --accent-border: rgba(79, 70, 229, 0.25);
+
+  --cyan-accent: #0284c7;
+  --cyan-glow: rgba(2, 132, 199, 0.2);
+  --emerald-accent: #059669;
+  --amber-accent: #d97706;
+  --rose-accent: #e11d48;
+
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-base: rgba(0, 0, 0, 0.1);
+  --border-strong: rgba(0, 0, 0, 0.18);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 6px 18px -3px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 30px -6px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 25px rgba(79, 70, 229, 0.15);
+
+  --canvas-grid-color: rgba(79, 70, 229, 0.04);
+  --canvas-dot-color: rgba(79, 70, 229, 0.12);
+}

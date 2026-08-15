@@ -1,0 +1,76 @@
+.badge-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  line-height: 1;
+}
+
+.badge-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.badge-sm {
+  padding: 0.25rem 0.6rem;
+  font-size: var(--text-xs);
+}
+
+.badge-md {
+  padding: 0.35rem 0.85rem;
+  font-size: var(--text-sm);
+}
+
+.badge-default {
+  background: var(--bg-surface-elevated);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-base);
+}
+
+.badge-accent {
+  background: var(--accent-glow-subtle);
+  color: var(--text-accent);
+  border: 1px solid var(--accent-border);
+}
+
+.badge-cyan {
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--cyan-accent);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.badge-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--emerald-accent);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-amber {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--amber-accent);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-rose {
+  background: rgba(244, 63, 94, 0.12);
+  color: var(--rose-accent);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.badge-outline {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+.badge-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+  animation: pulseGlow 1.8s infinite;
+}

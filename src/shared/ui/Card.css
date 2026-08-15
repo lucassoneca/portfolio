@@ -1,0 +1,35 @@
+.card-custom {
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  position: relative;
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.card-glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-elevated {
+  background: var(--bg-surface-elevated);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-base);
+  box-shadow: var(--shadow-md);
+}
+
+.card-glow {
+  background: var(--bg-glass-strong);
+  border: 1px solid var(--accent-border);
+  box-shadow: var(--shadow-glow);
+}
+
+.card-hoverable:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg), 0 0 24px var(--accent-glow-subtle);
+}
