@@ -28,7 +28,7 @@ export const AboutSection: React.FC = () => {
           badge={t.about.badge}
           badgeIcon={<User size={14} />}
           title={t.about.title}
-          subtitle={`Conheça um pouco mais sobre minha jornada de ${profileData.age} anos, formação em ADS, atuação em backend e desenvolvimento de páginas modernas.`}
+          subtitle={`Conheça minha trajetória de ${profileData.age} anos, formação em ADS, atuação em backend e desenvolvimento de páginas modernas.`}
         />
 
         <div className="about-grid-wrapper">
@@ -42,6 +42,7 @@ export const AboutSection: React.FC = () => {
                   <span className="dot dot-green" />
                 </div>
                 <span className="spotlight-filename">lucas-bezerra.ts</span>
+                <span className="spotlight-badge">ADS</span>
               </div>
 
               <div className="spotlight-code-body">
@@ -49,15 +50,18 @@ export const AboutSection: React.FC = () => {
 {`const engineer = {
   name: "${profileData.name}",
   age: ${profileData.age},
-  education: "Graduado em ADS",
+  degree: "Graduado em ADS",
   focus: [
     "Backend & APIs RESTful",
-    "Sites & Landing Pages Modernas"
+    "Sites & Landing Pages"
   ],
-  stack: ["Java", "Spring Boot", "TypeScript", "Node.js", "SQL"],
-  methodologies: ["Clean Code", "SOLID", "MVC"],
-  github: "github.com/lucassoneca",
-  status: "Ready to Build"
+  stack: [
+    "Java", "Spring Boot",
+    "TypeScript", "Node.js", "SQL"
+  ],
+  methodologies: [
+    "Clean Code", "SOLID"
+  ]
 };`}
                 </pre>
               </div>
@@ -76,9 +80,9 @@ export const AboutSection: React.FC = () => {
                       className="spotlight-btn"
                       title="Ver GitHub"
                     >
-                      <GithubIcon size={16} />
+                      <GithubIcon size={15} />
                       <span>GitHub</span>
-                      <ExternalLink size={12} />
+                      <ExternalLink size={11} />
                     </a>
                     <a
                       href={profileData.socialLinks.find((s) => s.platform === 'linkedin')?.url}
@@ -87,9 +91,9 @@ export const AboutSection: React.FC = () => {
                       className="spotlight-btn"
                       title="Ver LinkedIn"
                     >
-                      <LinkedinIcon size={16} />
+                      <LinkedinIcon size={15} />
                       <span>LinkedIn</span>
-                      <ExternalLink size={12} />
+                      <ExternalLink size={11} />
                     </a>
                   </div>
                 </div>
@@ -101,7 +105,7 @@ export const AboutSection: React.FC = () => {
           <div className="about-content-column">
             <Card variant="glass" className="about-bio-card">
               <div className="about-card-badge-row">
-                <Badge variant="cyan" size="sm" icon={<GraduationCap size={14} />}>
+                <Badge variant="cyan" size="sm" icon={<GraduationCap size={13} />}>
                   Graduado em ADS
                 </Badge>
                 <Badge variant="accent" size="sm">
@@ -111,12 +115,12 @@ export const AboutSection: React.FC = () => {
                   Backend & APIs
                 </Badge>
                 <Badge variant="accent" size="sm" icon={<Layout size={13} />}>
-                  Landing Pages Modernas
+                  Sites Modernos
                 </Badge>
               </div>
 
               <h3 className="about-headline">
-                Desenvolvimento de sistemas robustos e criação de sites modernos de alto impacto visual.
+                Desenvolvimento de sistemas robustos e criação de páginas web modernas de alto impacto.
               </h3>
 
               <div className="about-paragraphs">
@@ -130,13 +134,13 @@ export const AboutSection: React.FC = () => {
               {/* Core Competencies Highlights */}
               <div className="interests-wrapper">
                 <h4 className="interests-title">
-                  <Sparkles size={16} className="interests-icon" />
+                  <Sparkles size={15} className="interests-icon" />
                   Especialidades & Foco de Atuação:
                 </h4>
                 <div className="interests-pills-list">
                   {profileData.interests.map((interest, idx) => (
                     <span key={idx} className="interest-pill">
-                      <Code2 size={13} className="pill-icon" />
+                      <Code2 size={12} className="pill-icon" />
                       <span>{interest}</span>
                     </span>
                   ))}
@@ -147,33 +151,33 @@ export const AboutSection: React.FC = () => {
               <div className="dev-lifestyle-grid">
                 <div className="lifestyle-box">
                   <Server size={16} className="lifestyle-icon" />
-                  <div>
+                  <div className="lifestyle-info">
                     <span className="lifestyle-label">Backend Core</span>
-                    <span className="lifestyle-value">Java, Spring Boot, Node.js, TS</span>
+                    <span className="lifestyle-value">Java, Spring & Node.js</span>
                   </div>
                 </div>
 
                 <div className="lifestyle-box">
                   <Layout size={16} className="lifestyle-icon" />
-                  <div>
+                  <div className="lifestyle-info">
                     <span className="lifestyle-label">Criação Web</span>
-                    <span className="lifestyle-value">Landing Pages & Sites Responsivos</span>
+                    <span className="lifestyle-value">Landing Pages & Sites</span>
                   </div>
                 </div>
 
                 <div className="lifestyle-box">
                   <Database size={16} className="lifestyle-icon" />
-                  <div>
+                  <div className="lifestyle-info">
                     <span className="lifestyle-label">Bancos de Dados</span>
-                    <span className="lifestyle-value">PostgreSQL, MySQL, JPA/Hibernate</span>
+                    <span className="lifestyle-value">PostgreSQL & JPA/Hibernate</span>
                   </div>
                 </div>
 
                 <div className="lifestyle-box">
                   <Coffee size={16} className="lifestyle-icon" />
-                  <div>
+                  <div className="lifestyle-info">
                     <span className="lifestyle-label">Metodologia</span>
-                    <span className="lifestyle-value">Clean Code, SOLID & Foco</span>
+                    <span className="lifestyle-value">Clean Code & SOLID</span>
                   </div>
                 </div>
               </div>
